@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Tasarım Dokümanı: Otel / Kiralık Ev Rezervasyon Sistemi
 
 ## 1. Mimari
@@ -52,7 +51,6 @@ ev-otel-rezervasyon/
 04.rezervasyon-özeti.png
 05.giris-kayit.png
 
-use case kodu mermaid ile
 ## 2. Sınıf Diyagramı
 
 Diyagram, çekirdek akışı gösterir: rezervasyon oluşturma, çakışma kontrolü, Strategy ile gecelik fiyat hesabı, iptal ve iade. Controller yalnızca Service'i, Service yalnızca Repository arayüzünü çağırır.
@@ -178,6 +176,8 @@ classDiagram
 - **Strategy:** `PricingService`, fiyat kurallarını `PricingStrategyInterface` üzerinden çalıştırır. Yeni kural eklemek yeni bir sınıf eklemektir.
 - **Repository:** Servisler yalnızca `...RepositoryInterface` bilir. JSON (Aşama 2) ve PDO (Aşama 3) uygulamaları aynı arayüzü uygular.
 - **Çekirdek problem:** `AvailabilityService::isAvailable`, `findOverlapping` ile çakışmaları arar. Aynı gün çıkış-giriş çakışma sayılmaz.
+
+anlatıcı irem ablak 
 ## 3. ER Diyagramı
  
 ```mermaid
@@ -364,8 +364,8 @@ Her varlık kendi tablosunda tutulmuş, tekrarlayan veriler (fotoğraf, olanak, 
 1. `RESERVATION_NIGHTS.unit_id`: Kesin 3NF'ye göre fazlalıktır; ancak veritabanının `UNIQUE (unit_id, night_date)` kısıtını uygulayabilmesi için gereklidir. Bu kısıt çift rezervasyona karşı son savunmadır. Tutarsızlığı `(reservation_id, unit_id)` bileşik FK'si önler.
 2. `RESERVATIONS.total_price`: `RESERVATION_CHARGES` toplamından türetilebilir; ancak fiyat anlık görüntüsü olarak bilinçli saklanır (BR-16) ve testle kalemlerin toplamına eşitliği doğrulanır.
 
-
-## 4. Sıralama Diyagramı: Rezervasyon Oluşturma (Çekirdek: Çift Rezervasyon Önleme)
+anlatıcı irem ablak
+## 4. Sıralama Diyagramı: Rezervasyon Oluşturma (Çekirdek: Çift Rezervasyon Önleme) 
  
 ```mermaid
 sequenceDiagram
@@ -433,7 +433,7 @@ sequenceDiagram
         end
     end
 ```
- 
+ anlatıcı irem ablak
 ### Diyagramdaki durumlar
  
 | Dal | Senaryo | Sonuç |
