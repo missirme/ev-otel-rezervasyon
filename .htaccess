@@ -1,0 +1,13 @@
+# Proje WAMP'ın www klasöründe dururken yalnızca public/ klasörü web'e açılır.
+# storage (JSON veriler, yüklenen resimler), src, config, vendor gibi klasörlere doğrudan erişilemez.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule ^(?!public(/|$)) - [F,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
