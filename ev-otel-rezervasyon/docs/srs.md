@@ -1,0 +1,2 @@
+[OTEL_KIRALIK_EV_REZERVASYON_SISTEMI_SRS_v2_3.docx](https://github.com/user-attachments/files/33932518/OTEL_KIRALIK_EV_REZERVASYON_SISTEMI_SRS_v2_3.docx)
+
