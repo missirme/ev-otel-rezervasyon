@@ -1,0 +1,3 @@
+# JSON veri dosyaları, yüklenen resimler, günlükler ve simüle e-postalar web'den okunamaz.
+# Resimler yalnızca uygulama üzerinden (/foto/{id}) sunulur; bu klasörde betik çalıştırılamaz.
+Require all denied

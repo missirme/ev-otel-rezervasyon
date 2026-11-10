@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Bonus: PSR-12 kod stili denetimi (composer stil / composer stil:duzelt) -->
+<ruleset name="EvOtel">
+    <description>PSR-12 kod stili</description>
+    <file>src</file>
+    <file>tests</file>
+    <file>bin</file>
+    <file>config</file>
+    <file>public/index.php</file>
+    <arg name="extensions" value="php"/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+    <rule ref="PSR12">
+        <!-- Görünüm dosyaları HTML şablonudur; PSR-12 yalnızca PHP sınıflarına uygulanır -->
+        <exclude-pattern>views/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="180"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+        <!-- Örnek veri satırları tablo gibi tek satırda okunur -->
+        <exclude-pattern>src/Seed/*</exclude-pattern>
+    </rule>
+    <!-- Ön denetleyici ve betikler yan etki içerir (çıktı, yönlendirme) -->
+    <rule ref="PSR1.Files.SideEffects">
+        <exclude-pattern>public/index.php</exclude-pattern>
+        <exclude-pattern>bin/*</exclude-pattern>
+        <exclude-pattern>src/helpers.php</exclude-pattern>
+        <exclude-pattern>tests/bin/*</exclude-pattern>
+    </rule>
+</ruleset>

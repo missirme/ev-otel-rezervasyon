@@ -1,0 +1,16 @@
+# PSR-12: PHP dosyaları Unix satır sonu (LF) kullanır. Windows'ta core.autocrlf=true olsa bile
+# çalışma kopyası da LF kalsın diye satır sonu burada sabitlenir (PHPCS "InvalidEOLChar" vermez).
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.docx binary
+*.zip binary

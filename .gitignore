@@ -1,3 +1,20 @@
 /vendor/
 .phpunit.cache/
+.phpunit.result.cache
 .env
+/coverage/
+# Bilgisayara özel ayarlar ve gizli değerler (ör. SMTP uygulama şifresi); örnek: config/yerel.ornek.php
+/config/yerel.php
+
+# Çalışma zamanında üretilen veriler (örnek veri: composer seed)
+/storage/data/*
+!/storage/data/.gitkeep
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+!/storage/uploads/.htaccess
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/mail/*
+!/storage/mail/.gitkeep
+/storage/backups/*
+!/storage/backups/.gitkeep
